@@ -2,7 +2,7 @@
 
 相关文档：[Spring官方文档](http://docs.spring.io/spring/docs/current/spring-framework-reference/htmlsingle/#transaction-declarative-rolling-back)
 
-相关代码：[src/main/java/exception](src/main/java/exception)
+相关代码：[src/main/java/exception](src/main/java/exception)，[src/test/java/exception](src/test/java/exception)
 
 在Spring官方文档中说到，当Transaction内发生unchecked exception的时候，会自动rollback，但是当Transaction内发生checked exception时，是不会自动rollback的。
 

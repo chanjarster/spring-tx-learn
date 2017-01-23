@@ -1,5 +1,5 @@
-# spring-tx-learn
+# Transaction Isolation
 
-本项目用来解释和说明Spring transaction的相关用法。
+TODO
 
 

@@ -19,7 +19,6 @@ import static org.testng.Assert.assertTrue;
  *
  * Created by qianjia on 2017/1/22.
  */
-
 @SpringBootTest
 @SpringBootApplication
 public class ManualRollbackTest extends AbstractTestNGSpringContextTests {

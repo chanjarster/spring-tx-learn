@@ -24,7 +24,7 @@ import static org.testng.Assert.assertTrue;
  */
 @SpringBootTest
 @SpringBootApplication
-public class ExceptionHandlingTest extends AbstractTestNGSpringContextTests {
+public class ExceptionRollbackTest extends AbstractTestNGSpringContextTests {
 
   @Autowired
   private FooService fooService;

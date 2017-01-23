@@ -17,7 +17,7 @@
 3. NOT_SUPPORTED
 4. NEVER
 
-此外也没有对当不同的Transaction Propagation嵌套组合的时候的行为作一个详细说明，因此本文将会补全这一点。
+此外也没有对不同的Transaction Propagation嵌套组合的行为作一个详细说明，因此本文将会补全这一点。
 
 ## 测试方法的说明
 

@@ -17,7 +17,8 @@ public abstract class BarTxAbstractExecutor implements BarTxExecutor {
     this.jdbcTemplate = jdbcTemplate;
   }
 
-  public void insertInternal(boolean throwException, String... names) {
+  @Override
+  public void insert(boolean throwException, String... names) {
 
     for (String name : names) {
       LOGGER.debug("Insert Bar[" + name + "]");

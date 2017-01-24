@@ -17,7 +17,7 @@ public abstract class FooTxAbstractExecutor implements FooTxExecutor {
     this.jdbcTemplate = jdbcTemplate;
   }
 
-  public void insertInternal(BarTxExecutor barTxExecutor, boolean fooThrowException, boolean barThrowException, String... names) {
+  public void insert(BarTxExecutor barTxExecutor, boolean fooThrowException, boolean barThrowException, String... names) {
 
     for (String name : names) {
       LOGGER.debug("Insert Foo[" + name + "]");

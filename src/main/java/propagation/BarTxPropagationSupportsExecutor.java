@@ -18,7 +18,7 @@ public class BarTxPropagationSupportsExecutor extends BarTxAbstractExecutor {
   @Transactional(propagation = Propagation.SUPPORTS)
   @Override
   public void insert(boolean throwException, String... names) {
-    insertInternal(throwException, names);
+    super.insert(throwException, names);
   }
 
   @Override

@@ -2,6 +2,7 @@ package manual;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.flyway.FlywayAutoConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.Test;
@@ -20,7 +21,7 @@ import static org.testng.Assert.assertTrue;
  * Created by qianjia on 2017/1/22.
  */
 @SpringBootTest
-@SpringBootApplication
+@SpringBootApplication(exclude = FlywayAutoConfiguration.class)
 public class ManualRollbackTest extends AbstractTestNGSpringContextTests {
 
   @Autowired

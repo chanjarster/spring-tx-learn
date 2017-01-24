@@ -18,7 +18,7 @@ public class FooTxPropagationMandatoryExecutor extends FooTxAbstractExecutor {
   @Transactional(propagation = Propagation.MANDATORY)
   @Override
   public void insert(BarTxExecutor barTxExecutor, boolean fooThrowException, boolean barThrowException, String... names) {
-    insertInternal(barTxExecutor, fooThrowException, barThrowException, names);
+    super.insert(barTxExecutor, fooThrowException, barThrowException, names);
   }
 
   @Override

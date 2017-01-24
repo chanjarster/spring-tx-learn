@@ -18,7 +18,7 @@ public class FooTxPropagationNestedExecutor extends FooTxAbstractExecutor {
   @Transactional(propagation = Propagation.NESTED)
   @Override
   public void insert(BarTxExecutor barTxExecutor, boolean fooThrowException, boolean barThrowException, String... names) {
-    insertInternal(barTxExecutor, fooThrowException, barThrowException, names);
+    super.insert(barTxExecutor, fooThrowException, barThrowException, names);
   }
 
   @Override

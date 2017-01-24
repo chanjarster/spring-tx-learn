@@ -18,7 +18,7 @@ public class BarTxPropagationNeverExecutor extends BarTxAbstractExecutor {
   @Transactional(propagation = Propagation.NEVER)
   @Override
   public void insert(boolean throwException, String... names) {
-    insertInternal(throwException, names);
+    super.insert(throwException, names);
   }
 
   @Override

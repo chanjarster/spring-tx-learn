@@ -13,8 +13,8 @@
 先来了解一下当数据库并发读取时会出现的现象，因为所谓的事务隔离级别是针对这些现象而提出的：
 
 1. Dirty read([wiki][Dirty read])：A事务在读取**某一行**数据的时候，能够读到B事务还未提交的、对**同一行**数据的修改。
-2. Nonrepeatable read:([wiki][Nonrepeatable read])：在同一个事务里，在T1时间读取到的**某一行**的数据，在T2时间再次读取**同一行**数据时，发生了变化。者变化可能是被更新了、消失了。
-3. Phantom read([wiki][Phantom read])：在同一个事务里，用条件A，在T1时间查询到的数据是10行，但是在T2时间查询到的数据多余10行。需要注意的是，和 Nonrepeatable read 不同，Phantom read 在T1时读到的数据在T2时不会发生变化。注意，为何只说比10行多，那么比10行少就不是 Phantom read 了吗？因为 Nonrepeatable read 包含了数据消失的情况。
+2. Nonrepeatable read:([wiki][Nonrepeatable read])：在同一个事务里，在T1时间读取到的**某一行**的数据，在T2时间再次读取**同一行**数据时，发生了变化。后者变化可能是被更新了、消失了。
+3. Phantom read([wiki][Phantom read])：在同一个事务里，用条件A，在T1时间查询到的数据是10行，但是在T2时间查询到的数据多于10行。需要注意的是，和 Nonrepeatable read 不同，Phantom read 在T1时读到的数据在T2时不会发生变化。注意，为何只说比10行多，那么比10行少就不是 Phantom read 了吗？因为 Nonrepeatable read 包含了数据消失的情况。
 
 ## 事务隔离级别
 
